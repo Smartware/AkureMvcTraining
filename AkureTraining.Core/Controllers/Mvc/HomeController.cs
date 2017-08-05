@@ -36,15 +36,15 @@ namespace AkureTraining.Core.Controllers.Mvc
         }
         public ActionResult Index()
         {
-            //var counterData = _baseAppSvc.GetDashboardCounter(DateTime.Now).FirstOrDefault();
+            var counterData = _baseAppSvc.GetDashboardCounter(DateTime.Now).FirstOrDefault();
 
-            //var vm = new DasboardViewModel()
-            //{
-            //    TotalContacts = counterData.TotalContacts,
-            //    TodayTotalTransaction = counterData.TodayTotalTransaction,
-            //    SmsUnitBalance = counterData.SmsUnitBalance,
-            //    TotalmessageSent = counterData.TotalmessageSent
-            //};
+            var vm = new DasboardViewModel()
+            {
+                TotalContacts = counterData.TotalContacts,
+                TodayTotalTransaction = counterData.TodayTotalTransaction,
+                SmsUnitBalance = counterData.SmsUnitBalance,
+                TotalmessageSent = counterData.TotalmessageSent
+            };
 
             // ViewBag.ProfileName = $"{User.Identity.Name} - " + $"{this.Country}";
             return View(new DasboardViewModel() );
