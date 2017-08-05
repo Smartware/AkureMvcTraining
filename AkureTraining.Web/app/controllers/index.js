@@ -5,9 +5,9 @@
     controllers.newProductCtrl = function () {
     };
 
-    controllers.listCtrl = function ($scope, blockUI, pList) {
+    controllers.listProductCtrl = function ($scope, blockUI, pList) {
 
-        $scope.multiplier = 4 * 4;
+        $scope.productList = pList;
     };
 
     window.trainingApp.controller(controllers);

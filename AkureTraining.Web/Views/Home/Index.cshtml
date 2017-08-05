@@ -80,12 +80,11 @@
             </div>
 
         </div>
-        <div class="row" block-ui="staffBlockSection"
-     block-ui-pattern="/^\/api\/productapi($|\/).*/">
-       <ui-vew></ui-vew>
+        <ui-view class="row" block-ui="staffBlockSection"
+             block-ui-pattern="/^\/api\/productapi($|\/).*/">
+            <ui-view></ui-view>
         </div>
     </div>
-</div>
 <!-- CONTENT-WRAPPER SECTION END-->
 <footer>
     <div class="container">

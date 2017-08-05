@@ -3,7 +3,7 @@
         appUrl: ''
     };
 
-    var akureTrainingApp = angular.bootstrap(window.document, ['blockUI', 'angularUtils.directives.dirPagination', 'ui.router']);
+    var akureTrainingApp = angular.module("akureTrainingApp", ['blockUI', 'angularUtils.directives.dirPagination', 'ui.router']);
 
     window.trainingApp = akureTrainingApp;
 

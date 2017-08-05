@@ -13,14 +13,18 @@
 
     window.trainingApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-        $stateProvider.state('/app', {
-            url: 'productList',
+        $stateProvider.state('app', {
+            url: '/productList',
+            templateUrl: '/Home/ProductList',
+            controller: 'listProductCtrl',
             resolve: {
+                //inject pList array object into listProductCtrl
+                //$q angular promise
                 pList: function ($http, $q) {
 
                     var deferred = $q.defer();
 
-                    var apiUrl = 'api/productapi/list'
+                    var apiUrl = 'api/productapi/list';
                     var postdata = {
 
                         keyword: '',
@@ -34,18 +38,19 @@
                         data: postdata
                     }).then(function (response) {
 
-                        deferred.resolve(response.result);
+                       
+                        deferred.resolve(response.data);
                     }, function (error) {
 
                         deferred.resolve([]);
                     });
 
-                    return deferred;
+                    return deferred.promise;
                 }
             }
         });
 
-        $urlRouterProvider.otherwise('/app');
+        $urlRouterProvider.otherwise('/productList');
     });
 
-}(window, JQuery))
+}(window, jQuery))

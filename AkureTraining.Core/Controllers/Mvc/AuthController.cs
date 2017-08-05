@@ -40,7 +40,7 @@ namespace AkureTraining.Core.Controllers.Mvc
            
             var identity = new ClaimsIdentity("DefaultAuthentication");
             identity.AddClaim(new Claim(ClaimTypes.Name, "Prolifik lexzy"));
-            identity.AddClaim(new Claim(ClaimTypes.Email, loginVM.Username));
+            identity.AddClaim(new Claim(ClaimTypes.Email, loginVM.UserName));
             identity.AddClaim(new Claim(ClaimTypes.Country, "Ondo State"));
 
             var ctxt = Request.GetOwinContext();

@@ -21,8 +21,10 @@ namespace AkureTraining.Core.Web
         {
             ConfigureAuth(app);
 
-            HttpConfiguration apiConfig = new HttpConfiguration();
+            HttpConfiguration apiConfig = new HttpConfiguration();// GlobalConfiguration.Configuration;
             ConfigureComposition(apiConfig);
+            ConfigureApi(apiConfig);
+            app.UseWebApi(apiConfig);
         }
     }
 }

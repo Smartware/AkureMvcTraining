@@ -10,7 +10,7 @@ namespace AkureTraining.Core.ViewModels
     public class LoginViewModel
     {
         [Required]
-        public String Username { get; set; }
+        public String UserName { get; set; }
         [Required]
         public String Password { get; set; }
     }
