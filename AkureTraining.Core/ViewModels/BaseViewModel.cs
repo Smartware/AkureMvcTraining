@@ -8,6 +8,6 @@ namespace AkureTraining.Core.ViewModels
 {
     public class BaseViewModel
     {
-        public String ErrorMessage { get; set; }
+        public virtual String ErrorMessage { get; set; }
     }
 }

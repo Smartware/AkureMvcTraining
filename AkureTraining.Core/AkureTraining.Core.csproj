@@ -149,6 +149,10 @@
     <Compile Include="Migrations\201708050315549_ProductModel.Designer.cs">
       <DependentUpon>201708050315549_ProductModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708071440321_Sp_GetAkureProducts.cs" />
+    <Compile Include="Migrations\201708071440321_Sp_GetAkureProducts.Designer.cs">
+      <DependentUpon>201708071440321_Sp_GetAkureProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\DataSetup\UserDataSetup.cs" />
     <Compile Include="Models\Account.cs" />
@@ -167,9 +171,12 @@
     <Compile Include="Services\Messages.cs" />
     <Compile Include="Services\MessagesServices.cs" />
     <Compile Include="Services\TransactionService.cs" />
+    <Compile Include="ViewModels\ApiResult.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\DasboardViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\ProductSearchViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModel.cs" />
     <Compile Include="ViewModels\TransactionViewModel.cs" />
     <Compile Include="Web\App_Start\FilterConfig.cs" />
     <Compile Include="Web\App_Start\RouteConfig.cs" />
@@ -201,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708050315549_ProductModel.resx">
       <DependentUpon>201708050315549_ProductModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708071440321_Sp_GetAkureProducts.resx">
+      <DependentUpon>201708071440321_Sp_GetAkureProducts.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

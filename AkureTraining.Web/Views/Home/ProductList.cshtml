@@ -1,6 +1,18 @@
 ﻿
-<table class="table table-striped">
-    <tr ng-repeat="n in productList">
-        <td>{{n}}</td>
-    </tr>
-</table>
+<div block-ui="productBlockSection"
+     block-ui-pattern="/^\/api\/productapi($|\/).*/">
+    <dir-pagination-controls on-page-change="pageChanged('@Url.Content("~/api/productapi/list")', newPageNumber)">
+    </dir-pagination-controls>
+    <table class="table table-striped">
+        <tr dir-paginate="n in productList | itemsPerPage: itemsOnPage" total-items="total"
+            current-page="pagination.current">
+            <td ng-bind="n.id"></td>
+            <td>{{n.name}}</td>
+            <td>{{n.qunatity}}</td>
+            <td>{{n.price}}</td>
+        </tr>
+    </table>
+
+    <dir-pagination-controls>
+    </dir-pagination-controls>
+</div>

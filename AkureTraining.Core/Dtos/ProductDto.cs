@@ -10,11 +10,13 @@ namespace AkureTraining.Core.Dtos
 {
     public class ProductDto : BaseEntity
     {
+        public Int32 ProductId { get; set; }
         public String Name { get; set; }
         public String Description { get; set; }
         public Int32? Quantity { get; set; } 
         public Decimal? Price { get; set; }
         public Nullable<DateTime> EntryDate { get; set; }
+        public Int32 TotalCount { get; set; } 
 
         public override List<ValidationError> Validate()
         {

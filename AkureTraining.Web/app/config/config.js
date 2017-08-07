@@ -37,9 +37,8 @@
                         method: 'POST',
                         data: postdata
                     }).then(function (response) {
-
                        
-                        deferred.resolve(response.data);
+                        deferred.resolve(response.data.result);
                     }, function (error) {
 
                         deferred.resolve([]);
